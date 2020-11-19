@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/yurii/Projects/dotnet/core-demos/TestConsole/TestConsole.csproj": {}
+  },
+  "projects": {
+    "/home/yurii/Projects/dotnet/core-demos/TestConsole/TestConsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/yurii/Projects/dotnet/core-demos/TestConsole/TestConsole.csproj",
+        "projectName": "TestConsole",
+        "projectPath": "/home/yurii/Projects/dotnet/core-demos/TestConsole/TestConsole.csproj",
+        "packagesPath": "/home/yurii/.nuget/packages/",
+        "outputPath": "/home/yurii/Projects/dotnet/core-demos/TestConsole/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/yurii/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
