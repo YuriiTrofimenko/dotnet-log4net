@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using log4net;
 using log4net.Config;
 
@@ -43,7 +44,32 @@ namespace org.tyaa.demo.dotnet.logging
         }
         static void Main(string[] args)
         {
-            // BasicConfigurator.Configure();
+            // MyGen<decimal> mg1 = new MyGen<decimal>();
+            // System.Console.WriteLine(mg1.Calculate(new Decimal(5), new Decimal(6)));
+            // System.Console.WriteLine(mg1.Calculate(5, 6));
+
+            /* List<IPassport> passports = new List<IPassport>() {
+              new ItalianPassport() {Name = "Mario", SureName="Abc", Sex=IEuPassport.Gender.Male},
+              new ItalianPassport() {Name = "Luigi", SureName="A", Sex=IEuPassport.Gender.Male},
+              new UkrainianPassport() {Name = "Maria", SureName="Xyz"}
+            }; */
+
+            List<IEuPassport> passports = new List<IEuPassport>() {
+              new ItalianPassport() {Name = "Mario", SureName="Abc", Sex=IEuPassport.Gender.Male},
+              new ItalianPassport() {Name = "Luigi", SureName="A", Sex=IEuPassport.Gender.Male}/* ,
+              new UkrainianPassport() {Name = "Maria", SureName="Xyz"} */
+            };
+
+            passports.ForEach(p => System.Console.WriteLine(PassportValidator<IEuPassport>.Validate(p)));
+
+            // MyGen<double> mg2;
+            // string s1 = new string("Hello");
+            // string s2 = new string("Hello");
+            /* string s1 = "Hello";
+            string s2 = "Hello";
+            System.Console.WriteLine(s1 == s2);
+            System.Console.WriteLine(Object.ReferenceEquals(s1, s2)); */
+            /* // BasicConfigurator.Configure();
             log4net.Config.XmlConfigurator.Configure();
             Console.Title = "Александр, ПСВ - 31-18/1";
             Console.ForegroundColor = ConsoleColor.Red;
@@ -143,7 +169,7 @@ namespace org.tyaa.demo.dotnet.logging
 
             } while (myk.Key != ConsoleKey.Escape);
 
-            Console.ResetColor();
+            Console.ResetColor();*/
         }
     }
 }
